@@ -19,7 +19,7 @@ div.pricing-item.active {
   margin-bottom: 4rem;
 }
 
-#login-form {
+#login-form, div.pricing-item.active.mentor-chat {
   padding: 1rem 3rem;
 }
 
@@ -31,4 +31,43 @@ div.pricing-item.active {
 
 #login-submit {
   margin-top: 2rem;
+}
+
+/* CONVERSATIONS TAB *********************************************************/
+div.pricing-item.active.mentor-chat {
+  width: 65%;
+  padding: 2rem;
+}
+
+#no-messages {
+  margin: 0 auto;
+  width: 50%;
+  margin-left: 80%;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+.message_holder_them {
+  margin-left: 5%:
+}
+
+input#email.form-control.message {
+  width: 25rem !important;
+}
+
+#convo-form {
+  margin-left: 35%;
+  margin-bottom: 3rem;
+}
+
+#send-text {
+  margin-left: 1rem;
+}
+
+.message_holder_mine {
+  margin-left: 40%;
+}
+
+.card {
+  border: 0px;
 }

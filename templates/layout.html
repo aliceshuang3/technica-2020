@@ -53,7 +53,7 @@ https://templatemo.com/tm-535-softy-pinko
                             <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'home' else '' }}">Home</a></li>
                             <li><a href="{{ url_for('login') }}" class="{{ 'active' if active_page == 'login' else '' }}">Login</a></li>
                             <li><a href="{{ url_for('inspiration') }}" class="{{ 'active' if active_page == 'inspiration' else '' }}">Inspirations</a></li>
-                            <li><a href="{{ url_for('index') }}">Conversations</a></li>
+                            <li><a href="{{ url_for('convos') }}" class="{{ 'active' if active_page == 'convos' else '' }}">Conversations</a></li>
                             <li><a href="{{ url_for('funding') }}" class="{{ 'active' if active_page == 'funding' else '' }}">Feedback & Funding</a></li>
                             <!-- <li><a href="{{ url_for('index') }}">Logout</a></li> -->
                         </ul>
@@ -79,7 +79,7 @@ https://templatemo.com/tm-535-softy-pinko
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
                         <h3>We provide the best opportunities to grow your business</h3>
                         <p>Don't have an account yet? Click here to join our community!</p>
-                        <a href="#features" class="main-button-slider">Sign Up</a>
+                        <a href="{{ url_for('signup')}}" class="main-button-slider">Sign Up</a>
                     </div>
                 </div>
             </div>
