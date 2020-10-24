@@ -113,12 +113,12 @@ body {
 }
 
 ::selection {
-  background: #ff589e;
+  background: #EE6C4D;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #ff589e;
+  background: #EE6C4D;
   color: #fff;
 }
 
@@ -148,7 +148,7 @@ body {
   font-weight: 500;
   font-size: 24px;
   line-height: 42px;
-  color: #1e1e1e;
+  color: #293241;
   letter-spacing: 0.25px;
   margin-bottom: 30px;
   position: relative;
@@ -161,7 +161,7 @@ body {
 .center-heading .section-title {
   font-weight: 500;
   font-size: 28px;
-  color: #1e1e1e;
+  color: #293241;
   letter-spacing: 1.75px;
   line-height: 38px;
   margin-bottom: 20px;
@@ -314,7 +314,7 @@ a.main-button-slider {
   font-size: 13px;
   border-radius: 20px;
   padding: 12px 20px;
-  background-color: #ff589e;
+  background-color: #EE6C4D;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.25px;
@@ -325,14 +325,14 @@ a.main-button-slider {
 }
 
 a.main-button-slider:hover {
-  background-color: #8261ee;
+  background-color: #3D5A80;
 }
 
 a.main-button {
   font-size: 13px;
   border-radius: 20px;
   padding: 12px 20px;
-  background-color: #8261ee;
+  background-color: #3D5A80;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.25px;
@@ -343,7 +343,7 @@ a.main-button {
 }
 
 a.main-button:hover {
-  background-color: #ff589e;
+  background-color: #EE6C4D;
 }
 
 button.main-button {
@@ -353,7 +353,7 @@ button.main-button {
   font-size: 13px;
   border-radius: 20px;
   padding: 12px 20px;
-  background-color: #8261ee;
+  background-color: #3D5A80;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.25px;
@@ -364,7 +364,7 @@ button.main-button {
 }
 
 button.main-button:hover {
-  background-color: #ff589e;
+  background-color: #EE6C4D;
 }
 
 
@@ -448,7 +448,7 @@ header
 }
 
 .header-area .main-nav .nav li a:hover {
-  color: #ff589e;
+  color: #EE6C4D;
 }
 
 .header-area .main-nav .menu-trigger {
@@ -556,11 +556,11 @@ header
 }
 
 .header-area.header-sticky .nav li a {
-  color: #1e1e1e;
+  color: #293241;
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #ff589e;
+  color: #EE6C4D;
 }
 
 @media (max-width: 1200px) {
@@ -644,7 +644,7 @@ welcome
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../images/banner-bg.png);
+  background-image: url(../images/banner-bg2.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; 
@@ -769,7 +769,7 @@ features
 }
 
 .features-small-item:hover .icon {
-  background-color: #ff589e;
+  background-color: #EE6C4D;
 }
 
 .features-small-item .icon {
@@ -783,7 +783,7 @@ features
   margin: auto;
   position: relative;
   margin-bottom: 30px;
-  background: #8261ee;
+  background: #3D5A80;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -797,7 +797,7 @@ features
 .features-small-item .features-title {
   font-weight: 500;
   font-size: 18px;
-  color: #1e1e1e;
+  color: #293241;
   letter-spacing: 0.7px;
   margin-bottom: 15px;
   position: relative;
@@ -857,7 +857,7 @@ parallax & home seperator
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url(../images/work-process-bg.png);
+  background-image: url(../images/work-process-bg2.png);
   z-index: 2;
   top: -20%;
   left: -20%;
@@ -963,7 +963,7 @@ parallax & home seperator
   display: block;
   font-weight: 400;
   font-size: 17px;
-  color: #1e1e1e;
+  color: #293241;
   letter-spacing: 0.25px;
   margin-bottom: 5px;
   margin-top: 20px;
@@ -980,7 +980,7 @@ parallax & home seperator
   width: 140%;
   height: 140%;
   opacity: .90;
-  background-image: url(../images/fun-facts-bg.png);
+  background-image: url(../images/fun-facts-bg2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1128,7 +1128,7 @@ team
   margin-left: 25px;
   margin-top: 25px;
   font-size: 30px;
-  color: #4E47DE;
+  color: #3D5A80;
   text-align: center;
 }
 
@@ -1166,7 +1166,7 @@ team
   display: block;
   font-weight: 400;
   font-size: 17px;
-  color: #1e1e1e;
+  color: #293241;
   letter-spacing: 0.25px;
   margin-bottom: 5px;
 }
@@ -1175,7 +1175,7 @@ team
   display: block;
   font-weight: 400;
   font-size: 15px;
-  color: #ff589e;
+  color: #EE6C4D;
   letter-spacing: 0.25px;
 }
 
@@ -1210,11 +1210,11 @@ pricing
 }
 
 .pricing-item.active .pricing-header .pricing-title {
-  color: #1e1e1e;
+  color: #293241;
 }
 
 .pricing-item.active .pricing-body .price-wrapper {
-  background-color: #ff589e;
+  background-color: #EE6C4D;
 }
 
 .pricing-item.active .pricing-body .price-wrapper .currency {
@@ -1240,7 +1240,7 @@ pricing
   font-weight: 500;
   font-size: 17px;
   letter-spacing: 0.25px;
-  color: #1e1e1e;
+  color: #293241;
   width: 180px;
   height: 40px;
   line-height: 40px;
@@ -1257,7 +1257,7 @@ pricing
   text-align: center;
   padding-top: 20px;
   padding-bottom: 13px;
-  background: #8261ee;
+  background: #3D5A80;
   width: 80%;
   margin: auto;
   margin-bottom: 40px;
@@ -1341,7 +1341,7 @@ blog
 .blog-post-thumb h3 a {
   font-weight: 500;
   font-size: 18px;
-  color: #1e1e1e;
+  color: #293241;
   letter-spacing: 0.25px;
   line-height: 26px;
   -webkit-transition: all 0.3s ease 0s;
@@ -1351,7 +1351,7 @@ blog
 }
 
 .blog-post-thumb h3 a:hover {
-  color: #ff589e;
+  color: #EE6C4D;
 }
 
 .blog-post-thumb .text {
@@ -1396,7 +1396,7 @@ contact
 #contact-us h5 {
   font-weight: 500;
   font-size: 18px;
-  color: #1e1e1e;
+  color: #293241;
   letter-spacing: 0.25px;
   line-height: 26px;
 }
@@ -1442,7 +1442,7 @@ footer
 --------------------------------------------- 
 */
 footer {
-  background-image: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+  background-image: linear-gradient(127deg, #3D5A80 0%, #98C1D9 91%);
   padding-top: 30px;
 }
 
@@ -1458,7 +1458,7 @@ footer .social li {
 }
 
 footer .social li a {
-  color: #9d5bd9;
+  color: #3D5A80;
    text-align: center;
   background-color: #fff;
   width: 36px;
@@ -1474,7 +1474,7 @@ footer .social li a {
 }
 
 footer .social li a:hover {
-  background-color: #ff589e;
+  background-color: #EE6C4D;
   color: #fff;
 }
 
@@ -1510,8 +1510,7 @@ preloader
 */
 #preloader {
   overflow: hidden;
-  background-image: linear-gradient(135deg, #a759d1 0%, #8261ee 100%);
-  left: 0;
+  background-image: linear-gradient(127deg, #3D5A80 0%, #98C1D9 91%);
   right: 0;
   top: 0;
   bottom: 0;
