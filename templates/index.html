@@ -1,10 +1,30 @@
 {% extends "layout.html" %}
 
+{% set active_page = "home" %}
+
 {% block heading %}
 
 {% endblock %}
 
 {% block body %}
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1>Join or support our growing community of <strong>women entrepreneurs</strong> and <strong>business owners</strong></h1>
+                        <p>Help diverse talent thrive in their businesses and startups today!</p>
+                        <a href="{{ url_for('login') }}" class="main-button-slider">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
 
     <!-- ***** Features Small Start ***** -->
     <section class="section home-feature">
@@ -16,10 +36,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                    <i><img src="{{ url_for('static', filename='/images/featured-item-01.png') }}" alt=""></i>
                                 </div>
-                                <h5 class="features-title">Modern Strategy</h5>
-                                <p>Customize anything in this template to fit your website needs</p>
+                                <h5 class="features-title">Meaningful Connections</h5>
+                                <p>Meet other women entrepreneurs and business owners in the same field and learn from other perspectives and best practices.</p>
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
@@ -28,10 +48,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                    <i><img src="{{ url_for('static', filename='/images/featured-item-01.png') }}" alt=""></i>
                                 </div>
-                                <h5 class="features-title">Best Relationship</h5>
-                                <p>Contact us immediately if you have a question in mind</p>
+                                <h5 class="features-title">Feedback and Funding</h5>
+                                <p>Share your business and get feedback and crowdfunding from our extensive community.</p>
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
@@ -40,10 +60,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                    <i><img src="{{ url_for('static', filename='/images/featured-item-01.png') }}" alt=""></i>
                                 </div>
-                                <h5 class="features-title">Ultimate Marketing</h5>
-                                <p>You just need to tell your friends about our free templates</p>
+                                <h5 class="features-title">Advertise Your Business</h5>
+                                <p>Join as a mentor and make a lifelong impact on other women as well as an opportunity to advertise your business and hire talented jobseekers.</p>
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
@@ -59,15 +79,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <img src="assets/images/left-image2.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                    <img src="{{ url_for('static', filename='/images/left-image2.png') }}" class="rounded img-fluid d-block mx-auto" alt="App">
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
                     <div class="left-heading">
-                        <h2 class="section-title">Let’s discuss about you project</h2>
+                        <h2 class="section-title">Let’s discuss your business or idea</h2>
                     </div>
                     <div class="left-text">
-                        <p>Nullam sit amet purus libero. Etiam ullamcorper nisl ut augue blandit, at finibus leo efficitur. Nam gravida purus non sapien auctor, ut aliquam magna ullamcorper.</p>
+                        <p>Connect with other women entrepreneurs and business owners about your business and grow together. Learn from established business owners and share your input on other businesses as well.</p>
                     </div>
                 </div>
             </div>
@@ -89,12 +109,12 @@
                         <h2 class="section-title">We can help you to grow your business</h2>
                     </div>
                     <div class="left-text">
-                        <p>Aenean pretium, ipsum et porttitor auctor, metus ipsum iaculis nisi, a bibendum lectus libero vitae urna. Sed id leo eu dolor luctus congue sed eget ipsum. Nunc nec luctus libero. Etiam quis dolor elit.</p>
+                        <p>Not only do we provide mentorship with established mentors, but also an opportunity for business owners to advertise their businesses and gain funding.</p>
                     </div>
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                    <img src="assets/images/right-image2.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                    <img src="{{ url_for('static', filename='/images/growing-business.jpg') }}" class="rounded img-fluid d-block mx-auto" style="width: 500px; height:300px" alt="App">
                 </div>
             </div>
         </div>
@@ -108,54 +128,33 @@
                 <div class="row">
                     <div class="offset-lg-3 col-lg-6">
                         <div class="info">
-                            <h1>Work Process</h1>
-                            <p>Aenean nec tempor metus. Maecenas ligula dolor, commodo in imperdiet interdum, vehicula ut ex. Donec ante diam.</p>
+                            <h1>1-on-1 Mentorship</h1>
+                            <p>Looking for feedback or career advice from people who were once in the same situation as yourself?</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- ***** Mini Box Start ***** -->
                 <div class="row">
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-012.png" alt=""></i>
-                            <strong>Get Ideas</strong>
-                            <span>Godard pabst prism fam cliche.</span>
+                            <i><img src="{{ url_for('static', filename='/images/001-resume.png') }}" alt=""></i>
+                            <span class="font-weight: 600"><strong>Application</strong></span>
+                            <span>Personalize your profile with your industry, knowledge areas, years of experience, what feedback or help you're looking for</span>
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-012.png" alt=""></i>
-                            <strong>Sketch Up</strong>
-                            <span>Godard pabst prism fam cliche.</span>
+                            <i><img style="width: 35px; height:35px;" src="{{ url_for('static', filename='/images/002-consultation.png') }}"  alt=""></i>
+                            <strong>Matching</strong>
+                            <span>We match female or non-binary entrepreneurs and business owners to women with established businesses.</span>
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-012.png" alt=""></i>
-                            <strong>Discuss</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-012.png" alt=""></i>
-                            <strong>Revise</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-012.png" alt=""></i>
-                            <strong>Approve</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-012.png" alt=""></i>
-                            <strong>Launch</strong>
-                            <span>Godard pabst prism fam cliche.</span>
+                            <i><img src="{{ url_for('static', filename='/images/003-help.png') }}"  alt=""></i>
+                            <strong>Conversation</strong>
+                            <span>Once a matching pair is found, we create a group chat in Conversations and you're free to start talking to each other.</span>
                         </a>
                     </div>
                 </div>
@@ -188,7 +187,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="team-item">
                         <div class="team-content">
-                            <i><img src="assets/images/testimonial-icon2.png" alt=""></i>
+                            <i><img src="{{ url_for('static', filename='/images/testimonial-icon2.png') }}" alt=""></i>
                             <p>Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p>
                             <div class="user-image">
                                 <img src="http://placehold.it/60x60" alt="">
@@ -206,7 +205,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="team-item">
                         <div class="team-content">
-                            <i><img src="assets/images/testimonial-icon2.png" alt=""></i>
+                            <i><img src="{{ url_for('static', filename='/images/testimonial-icon2.png') }}"  alt=""></i>
                             <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae, placerat nibh. Cras maximus venenatis molestie.</p>
                             <div class="user-image">
                                 <img src="http://placehold.it/60x60" alt="">
@@ -224,7 +223,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="team-item">
                         <div class="team-content">
-                            <i><img src="assets/images/testimonial-icon2.png" alt=""></i>
+                            <i><img src="{{ url_for('static', filename='/images/testimonial-icon2.png') }}"  alt=""></i>
                             <p>Quisque diam odio, maximus ac consectetur eu, auctor non lorem. Cras quis est non ante ultrices molestie. Ut vehicula et diam at aliquam.</p>
                             <div class="user-image">
                                 <img src="http://placehold.it/60x60" alt="">
@@ -241,114 +240,7 @@
         </div>
     </section>
     <!-- ***** Testimonials End ***** -->
-
-    <!-- ***** Pricing Plans Start ***** -->
-    <section class="section colored" id="pricing-plans">
-        <div class="container">
-            <!-- ***** Section Title Start ***** -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-heading">
-                        <h2 class="section-title">Pricing Plans</h2>
-                    </div>
-                </div>
-                <div class="offset-lg-3 col-lg-6">
-                    <div class="center-text">
-                        <p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis congue risus volutpat.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Section Title End ***** -->
-
-            <div class="row">
-                <!-- ***** Pricing Item Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
-                    <div class="pricing-item">
-                        <div class="pricing-header">
-                            <h3 class="pricing-title">Starter</h3>
-                        </div>
-                        <div class="pricing-body">
-                            <div class="price-wrapper">
-                                <span class="currency">$</span>
-                                <span class="price">14.50</span>
-                                <span class="period">monthly</span>
-                            </div>
-                            <ul class="list">
-                                <li class="active">60 GB space</li>
-                                <li class="active">600 GB transfer</li>
-                                <li class="active">Pro Design Panel</li>
-                                <li>15-minute support</li>
-                                <li>Unlimited Emails</li>
-                                <li>24/7 Security</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-footer">
-                            <a href="#" class="main-button">Purchase Now</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ***** Pricing Item End ***** -->
-
-                <!-- ***** Pricing Item Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
-                    <div class="pricing-item active">
-                        <div class="pricing-header">
-                            <h3 class="pricing-title">Premium</h3>
-                        </div>
-                        <div class="pricing-body">
-                            <div class="price-wrapper">
-                                <span class="currency">$</span>
-                                <span class="price">21.50</span>
-                                <span class="period">monthly</span>
-                            </div>
-                            <ul class="list">
-                                <li class="active">120 GB space</li>
-                                <li class="active">1200 GB transfer</li>
-                                <li class="active">Pro Design Panel</li>
-                                <li class="active">15-minute support</li>
-                                <li>Unlimited Emails</li>
-                                <li>24/7 Security</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-footer">
-                            <a href="#" class="main-button">Purchase Now</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ***** Pricing Item End ***** -->
-
-                <!-- ***** Pricing Item Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
-                    <div class="pricing-item">
-                        <div class="pricing-header">
-                            <h3 class="pricing-title">Advanced</h3>
-                        </div>
-                        <div class="pricing-body">
-                            <div class="price-wrapper">
-                                <span class="currency">$</span>
-                                <span class="price">42.00</span>
-                                <span class="period">monthly</span>
-                            </div>
-                            <ul class="list">
-                                <li class="active">250 GB space</li>
-                                <li class="active">5000 GB transfer</li>
-                                <li class="active">Pro Design Panel</li>
-                                <li class="active">15-minute support</li>
-                                <li class="active">Unlimited Emails</li>
-                                <li class="active">24/7 Security</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-footer">
-                            <a href="#" class="main-button">Purchase Now</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ***** Pricing Item End ***** -->
-            </div>
-        </div>
-    </section>
-    <!-- ***** Pricing Plans End ***** -->
-
+    
     <!-- ***** Counter Parallax Start ***** -->
     <section class="counter">
         <div class="content">
@@ -383,78 +275,6 @@
         </div>
     </section>
     <!-- ***** Counter Parallax End ***** -->
-
-    <!-- ***** Blog Start ***** -->
-    <section class="section" id="blog">
-        <div class="container">
-            <!-- ***** Section Title Start ***** -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-heading">
-                        <h2 class="section-title">Blog Entries</h2>
-                    </div>
-                </div>
-                <div class="offset-lg-3 col-lg-6">
-                    <div class="center-text">
-                        <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae, placerat nibh. Cras maximus venenatis molestie.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Section Title End ***** -->
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="blog-post-thumb">
-                        <div class="img">
-                            <img src="assets/images/blog-item-01.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h3>
-                                <a href="#">Vivamus ac vehicula dui</a>
-                            </h3>
-                            <div class="text">
-                               Cras aliquet ligula dui, vitae fermentum velit tincidunt id. Praesent eu finibus nunc. Nulla in sagittis eros. Aliquam egestas augue.
-                            </div>
-                            <a href="#" class="main-button">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="blog-post-thumb">
-                        <div class="img">
-                            <img src="assets/images/blog-item-02.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h3>
-                                <a href="#">Phasellus convallis augue</a>
-                            </h3>
-                            <div class="text">
-                                Aliquam commodo ornare nisl, et scelerisque nisl dignissim ac. Vestibulum finibus urna ut velit venenatis, vel ultrices sapien mattis.
-                            </div>
-                            <a href="#" class="main-button">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="blog-post-thumb">
-                        <div class="img">
-                            <img src="assets/images/blog-item-03.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h3>
-                                <a href="#">Nam gravida purus non</a>
-                            </h3>
-                            <div class="text">
-                                Maecenas eu erat vitae dui convallis consequat vel gravida nulla. Vestibulum finibus euismod odio, ut tempus enim varius eu.
-                            </div>
-                            <a href="#" class="main-button">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Blog End ***** -->
 
     <!-- ***** Contact Us Start ***** -->
     <section class="section colored" id="contact-us">

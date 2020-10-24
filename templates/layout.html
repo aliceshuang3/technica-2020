@@ -45,18 +45,17 @@ https://templatemo.com/tm-535-softy-pinko
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="#" class="logo">
-                            <img src="../assets/images/logo.png" alt="Softy Pinko"/>
+                            <img src="{{ url_for('static', filename='/images/logo.png') }}" alt=""/>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="#welcome" class="active">Home</a></li>
-                            <li><a href="#features">About</a></li>
-                            <li><a href="#work-process">Work Process</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#pricing-plans">Pricing Tables</a></li>
-                            <li><a href="#blog">Blog Entries</a></li>
-                            <li><a href="#contact-us">Contact Us</a></li>
+                            <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'home' else '' }}">Home</a></li>
+                            <li><a href="{{ url_for('login') }}" class="{{ 'active' if active_page == 'login' else '' }}">Login</a></li>
+                            <li><a href="{{ url_for('inspiration') }}" class="{{ 'active' if active_page == 'inspiration' else '' }}">Inspirations</a></li>
+                            <li><a href="{{ url_for('index') }}">Conversations</a></li>
+                            <li><a href="{{ url_for('funding') }}" class="{{ 'active' if active_page == 'funding' else '' }}">Feedback & Funding</a></li>
+                            <!-- <li><a href="{{ url_for('index') }}">Logout</a></li> -->
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -69,26 +68,6 @@ https://templatemo.com/tm-535-softy-pinko
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <!-- ***** Welcome Area Start ***** -->
-    <div class="welcome-area" id="welcome">
-
-        <!-- ***** Header Text Start ***** -->
-        <div class="header-text">
-            <div class="container">
-                <div class="row">
-                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h1>We provide the best <strong>strategy</strong><br>to grow up your <strong>business</strong></h1>
-                        <p>Softy Pinko is a professional Bootstrap 4.0 theme designed by Template Mo
-                        for your company at absolutely free of charge</p>
-                        <a href="#features" class="main-button-slider">Discover More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ***** Header Text End ***** -->
-    </div>
-    <!-- ***** Welcome Area End ***** -->
-
     {% block heading %}
     {% endblock %}
 
@@ -99,19 +78,12 @@ https://templatemo.com/tm-535-softy-pinko
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <ul class="social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    </ul>
-                </div>
+                <!-- Place logo image here -->
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="copyright">Copyright &copy; 2020 Softy Pinko Company - Design: TemplateMo</p>
+                    <p class="copyright1">Copyright &copy; 2020 Three pushes to a git - Design: TemplateMo</p>
+                    <p class="copyright2"><a href="">Terms & Conditions</a> | <a href="">Privacy Policy</a></p>
                 </div>
             </div>
         </div>
