@@ -1,5 +1,5 @@
-from flask import Flask
-from pymongo import MongoClient 
+from flask import Flask, render_template
+from pymongo import MongoClient
 
 app = Flask(__name__)
 
@@ -24,8 +24,8 @@ print('finished creating 500 business reviews')
 @app.route("/")
 
 def index():
-    
-    return "!"
+
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
