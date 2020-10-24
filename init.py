@@ -25,8 +25,8 @@ pw = [0,1,2,3,4]
 # index route
 @app.route("/")
 def index():
-    if 'username' in session:
-        return 'You are logged in as ' + session['username']
+    # if 'username' in session:
+    #     return 'You are logged in as ' + session['username']
     return render_template("index.html")
 
 @app.route("/login", methods=['POST', 'GET'])
@@ -59,6 +59,17 @@ def login():
 def convos():
     return render_template("convos.html")
 
+@app.route("/signup", methods=["GET", "POST"])
+def signup():
+    return render_template("signup.html")
+
+@app.route("/inspiration", methods=["GET"])
+def inspiration():
+    return render_template("inspo.html")
+
+@app.route("/funding", methods=["GET"])
+def funding():
+    return render_template("funding.html")
 
 if __name__ == "__main__":
     app.run()
