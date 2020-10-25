@@ -1,9 +1,11 @@
 from flask import Flask, render_template, url_for, request, session, redirect
 from pymongo import MongoClient
 import bcrypt
+from flask_socketio import SocketIO
 
 app = Flask(__name__)
 app.secret_key = 'mysecret'
+socketio = SocketIO(app)
 
 client = MongoClient('mongodb+srv://Sojin:technica@cluster0.e0mte.mongodb.net/<Technica>?ssl=true&ssl_cert_reqs=CERT_NONE')
 db = client.Users
@@ -57,7 +59,18 @@ def login():
 
 @app.route("/convos", methods=["GET"])
 def convos():
-    return render_template("convos.html")
+    if 'username' in session:
+        user = session['username']
+        return render_template("convos.html", user=user)
+    return redirect(url_for('login'))
+
+def messageReceived(methods=['GET', 'POST']):
+    print('message was received!!!')
+
+@socketio.on('my event')
+def handle_my_custom_event(json, methods=['GET', 'POST']):
+    print('received my event: ' + str(json))
+    socketio.emit('my response', json, callback=messageReceived)
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
