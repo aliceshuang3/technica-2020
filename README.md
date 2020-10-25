@@ -7,6 +7,9 @@ Alice Huang, Jacquelyn Chow, Sojin Lim
 ## Logo
 ![thriveher](https://user-images.githubusercontent.com/51340361/97111397-d47fc600-16b4-11eb-8085-87438b5119f6.jpg)
 
+## Demo Video
+[Click here for demo video](https://youtu.be/Y2aJDZ4DTew)
+
 ## Inspiration
 We decided to build ThriveHer because supporting small businesses and womenx entrepreneurs/business owners is always a pressing issue, but even more so now during the pandemic. We hope this will be a valuable tool for women and non-binary entrepreneurs to form local connections with one another, gain traction in the small business world, and find the key insights they need to make the next leap in their businesses’ journeys. We hope this will empower more women to build successful, influential businesses that will really benefit the whole community!
 
