@@ -95,6 +95,45 @@ https://templatemo.com/tm-535-softy-pinko
             </div>
         </div>
         {% endif %}
+        {% if active_page == 'signup' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h3>We provide the best opportunities to grow your business</h3>
+                        <p>Already have an account? Click here to log in!</p>
+                        <a href="{{ url_for('login') }}" class="main-button-slider">Log in </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if active_page == 'funding' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h3> Watch your business take off</h3>
+                        <p>Pitch your project! Our platform will help you gather funds to bring your ideas to life. </p>
+                        <a href="{{ url_for('signup') }}" class="main-button-slider">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if active_page == 'feedback' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h3> We were all once beginners </h3>
+                        <p> Mentors from all walks of life are here to give feedback on your business plan. </p>
+                        <a href="{{ url_for('signup') }}" class="main-button-slider">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
     </div>
 
     {% endif %}

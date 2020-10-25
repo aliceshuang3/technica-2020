@@ -87,10 +87,15 @@ def inspiration():
 def funding():
     return render_template("funding.html", user=session["username"])
 
+@app.route("/feedback") 
+def feedback():
+    return render_template("feedback.html")
+
 @app.route("/logout", methods=["GET"])
 def logout():
     session['username'] = ""
     return redirect(url_for('index'))
+
 
 if __name__ == "__main__":
     app.run()
