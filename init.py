@@ -70,7 +70,7 @@ def signup():
                 return 'Password doesn\'t match confirmation!'
 
             hashpass = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-            users.insert({'name' : request.form['username'], 'pw' : hashpass})
+            users.insert({'name' : request.form['username'], 'pw' : hashpass, 'preferences' : request.form.getlist('options')})
             session['username'] = username
             return redirect(url_for('index'))
     
