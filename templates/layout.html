@@ -20,7 +20,7 @@ https://templatemo.com/tm-535-softy-pinko
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/font-awesome.css') }}">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/templatemo-softy-pinko.css') }}">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
@@ -126,9 +126,21 @@ https://templatemo.com/tm-535-softy-pinko
             <div class="container">
                 <div class="row">
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h3> We were all once beginners </h3>
+                        <h3 style="color: white; margin-bottom: 2rem;"> We were all once beginners </h3>
                         <p> Mentors from all walks of life are here to give feedback on your business plan. </p>
                         <a href="{{ url_for('signup') }}" class="main-button-slider">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if active_page == 'convos' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h3>Get advice from experienced professionals</h3>
+                        <p>Ask your mentor questions you have about making a statement in the small business world</p>
                     </div>
                 </div>
             </div>
@@ -144,10 +156,7 @@ https://templatemo.com/tm-535-softy-pinko
     {% endblock %}
 
     {% block body %}
-<<<<<<< HEAD
-=======
 
->>>>>>> 75f881b56680f30680828765a03a122aafe468f6
     {% endblock %}
 
     <!-- ***** Footer Start ***** -->
