@@ -69,9 +69,21 @@ https://templatemo.com/tm-535-softy-pinko
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Welcome Area Start ***** -->
+    {% if active_page == 'home' or 'login' %}
     <div class="welcome-area" id="welcome">
-
-        <!-- ***** Header Text Start ***** -->
+        {% if active_page == 'home' %}
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1>Join or support our growing community of <strong>women entrepreneurs</strong> and <strong>business owners</strong></h1>
+                        <p>Help diverse talent thrive in their businesses and startups today!</p>
+                        <a href="{{ url_for('login') }}" class="main-button-slider">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
         {% if active_page == 'login' %}
         <div class="header-text">
             <div class="container">
@@ -85,14 +97,17 @@ https://templatemo.com/tm-535-softy-pinko
             </div>
         </div>
         {% endif %}
-        <!-- ***** Header Text End ***** -->
     </div>
+    
+    {% endif %}
+    
     <!-- ***** Welcome Area End ***** -->
 
     {% block heading %}
     {% endblock %}
 
     {% block body %}
+    
     {% endblock %}
 
     <!-- ***** Footer Start ***** -->
