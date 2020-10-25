@@ -1438,6 +1438,34 @@ contact
 
 /* 
 ---------------------------------------------
+inspo page
+--------------------------------------------- 
+*/
+.inspo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.LRwrapper {
+  display: flex;
+}
+.business-image {
+  margin-right: 30px;
+}
+.share-apply-btns {
+  position: absolute;
+  right: 0; 
+  margin-top: 10px;
+  margin-right: 30px;
+}
+.business-text {
+  font-size: 15px;
+}
+
+/* 
+---------------------------------------------
 footer
 --------------------------------------------- 
 */

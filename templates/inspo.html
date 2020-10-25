@@ -4,11 +4,74 @@
 
 {% block heading %}
 
+<div class="inspo" id="inspiration">
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header">
+                        <h2 class="inspo-title">Established Businesses</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="d-flex flex-column">
+                    <div class="card p-2 mt-4" style="width: 100%;">
+                        <div class="card-body LRwrapper">
+                            <div class="business-image">
+                                <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/fakecompany2.jpg') }}" alt="">
+                            </div>
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>GetWellFast</strong></h5>
+                                <p class="business-text mb-1">Location: Pennsylvania, USA</p>
+                                <p class="business-text">A corporate wellness program provider that helps people achieve their potential through remote and on-site wellbeing support.</p>
+                            </div>
+                            <div class="share-apply-btns">
+                                <a href="#" class="main-button mr-2">Share</a>
+                                <a href="#" class="main-button">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-2 mt-4" style="width: 100%;">
+                        <div class="card-body LRwrapper">
+                            <div class="business-image">
+                                <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/fakecompany3.svg') }}" alt="">
+                            </div>
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>Business Name</strong></h5>
+                                <p class="business-text mb-1">Location: San Francisco, USA</p>
+                                <p class="business-text">Hum any song and our technology will pin point the song and artist for you!</p>
+                            </div>
+                            <div class="share-apply-btns">
+                                <a href="#" class="main-button mr-2">Share</a>
+                                <a href="#" class="main-button">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-2 mt-4" style="width: 100%;">
+                        <div class="card-body LRwrapper">
+                            <div class="business-image">
+                                <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/flooop.png') }}" alt="">
+                            </div>
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>Business Name</strong></h5>
+                                <p class="business-text mb-1">Location: New Jersey, USA</p>
+                                <p class="business-text">We build exceptional digital products—from mobile apps to responsive websites, voice skills, and more—that drive growth for the world’s leading brands.</p>
+                            </div>
+                            <div class="share-apply-btns">
+                                <a href="#" class="main-button mr-2">Share</a>
+                                <a href="#" class="main-button">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}
 
 {% block body %}
-<section>
-    <!-- your workforce. your way. -->
-    <p>Hello Inspo</p>
-</section>
 {% endblock %}
