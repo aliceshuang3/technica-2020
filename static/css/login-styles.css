@@ -88,3 +88,21 @@ input#email.form-control.message {
 .bubble_them {
   background-color: #98C1D9;
 }
+
+.forgot-link {
+  color:#EE6C4D;
+}
+.forgot-link:hover {
+  color:  #98C1D9;
+}
+.forgot-pw p {
+  font-size:14px;
+}
+
+.username, .password {
+  font-weight: 600;
+  color:#6F8BA4;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+  text-transform: uppercase;
+}

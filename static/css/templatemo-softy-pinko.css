@@ -408,6 +408,9 @@ header
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  width:130px; 
+  height:80px;
+  margin-left: 0px;
 }
 
 .header-area .main-nav .nav {
@@ -548,7 +551,7 @@ header
 }
 
 .header-area.header-sticky .logo {
-  margin-top: 25px;
+  margin-top: 0px;
 }
 
 .header-area.header-sticky .nav {
@@ -584,7 +587,7 @@ header
     padding: 0px;
   }
   .header-area .logo {
-    margin-top: 27px !important;
+    margin-top: 5px !important;
     margin-left: 30px;
   }
   .header-area .menu-trigger {
@@ -1448,6 +1451,13 @@ inspo page
   justify-content: center;
   margin-bottom: 100px;
 }
+.inspo-title {
+  margin-left: 15px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #293241;
+}
 .LRwrapper {
   display: flex;
 }
@@ -1463,6 +1473,18 @@ inspo page
 .business-text {
   font-size: 15px;
 }
+.page-link {
+  color: #EE6C4D;
+  font-weight: 600;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.page-link:hover {
+  color: #6F8BA4;
+}
+
 
 /* 
 ---------------------------------------------
