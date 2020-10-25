@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-=======
 
 
   <head>
@@ -22,7 +21,7 @@ https://templatemo.com/tm-535-softy-pinko
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/font-awesome.css') }}">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/templatemo-softy-pinko.css') }}">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
@@ -42,10 +41,15 @@ https://templatemo.com/tm-535-softy-pinko
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'home' else '' }}">Home</a></li>
+                            {% if not active_user %}
                             <li><a href="{{ url_for('login') }}" class="{{ 'active' if active_page == 'login' else '' }}">Login</a></li>
+                            {% endif %}
                             <li><a href="{{ url_for('inspiration') }}" class="{{ 'active' if active_page == 'inspiration' else '' }}">Inspirations</a></li>
                             <li><a href="{{ url_for('convos') }}" class="{{ 'active' if active_page == 'convos' else '' }}">Conversations</a></li>
                             <li><a href="{{ url_for('funding') }}" class="{{ 'active' if active_page == 'funding' else '' }}">Feedback & Funding</a></li>
+                            {% if active_user %}
+                            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                            {% endif %}
                             <!-- <li><a href="{{ url_for('index') }}">Logout</a></li> -->
                         </ul>
                         <a class='menu-trigger'>
@@ -157,7 +161,7 @@ https://templatemo.com/tm-535-softy-pinko
             </div>
         </section>
     </div>
-    
+
 
     {% block heading %}
     {% endblock %}
@@ -204,4 +208,3 @@ https://templatemo.com/tm-535-softy-pinko
 
   </body>
 </html>
-
