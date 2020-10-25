@@ -31,6 +31,9 @@ https://templatemo.com/tm-535-softy-pinko
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                  {% if active_user %}
+                  <p class="logged-in">Welcome, {{ active_user }}</p>
+                  {% endif %}
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="#" class="logo">
@@ -40,11 +43,15 @@ https://templatemo.com/tm-535-softy-pinko
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'home' else '' }}">Home</a></li>
+                            {% if not active_user %}
                             <li><a href="{{ url_for('login') }}" class="{{ 'active' if active_page == 'login' else '' }}">Login</a></li>
+                            {% endif %}
                             <li><a href="{{ url_for('inspiration') }}" class="{{ 'active' if active_page == 'inspiration' else '' }}">Inspirations</a></li>
                             <li><a href="{{ url_for('convos') }}" class="{{ 'active' if active_page == 'convos' else '' }}">Conversations</a></li>
                             <li><a href="{{ url_for('funding') }}" class="{{ 'active' if active_page == 'funding' else '' }}">Feedback & Funding</a></li>
-                            <!-- <li><a href="{{ url_for('index') }}">Logout</a></li> -->
+                            {% if active_user %}
+                            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                            {% endif %}
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -58,8 +65,10 @@ https://templatemo.com/tm-535-softy-pinko
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Welcome Area Start ***** -->
+
+        <!-- ***** Header Text Start ***** -->
     {% if active_page == 'home' or 'login' %}
-    <div class="welcome-area" id="welcome">
+    <div class="welcome-area {{ 'smaller-welcome' if active_page == 'convos' else '' }}" id="welcome">
         {% if active_page == 'home' %}
         <div class="header-text">
             <div class="container">
@@ -80,22 +89,26 @@ https://templatemo.com/tm-535-softy-pinko
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
                         <h3>We provide the best opportunities to grow your business</h3>
                         <p>Don't have an account yet? Click here to join our community!</p>
-                        <a href="{{ url_for('signup')}}" class="main-button-slider">Sign Up</a>
+                        <a href="{{ url_for('signup') }}" class="main-button-slider">Sign Up</a>
                     </div>
                 </div>
             </div>
         </div>
         {% endif %}
     </div>
-    
+
     {% endif %}
-    
+
     <!-- ***** Welcome Area End ***** -->
 
     {% block heading %}
     {% endblock %}
 
     {% block body %}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 75f881b56680f30680828765a03a122aafe468f6
     {% endblock %}
 
     <!-- ***** Footer Start ***** -->

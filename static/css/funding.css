@@ -1,0 +1,8 @@
+.share-apply-btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    margin-right: 1em;
+}

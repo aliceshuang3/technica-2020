@@ -41,14 +41,6 @@ div.pricing-item.active.mentor-chat {
   padding: 2rem;
 }
 
-#no-messages {
-  margin: 0 auto;
-  width: 50%;
-  margin-left: 80%;
-  margin-top: -3rem;
-  margin-bottom: 3rem;
-}
-
 .message_holder_them {
   margin-left: 5%:
 }
@@ -58,7 +50,7 @@ input#email.form-control.message {
 }
 
 #convo-form {
-  margin-left: 35%;
+  margin-left: 33%;
   margin-bottom: 3rem;
 }
 
@@ -89,6 +81,7 @@ input#email.form-control.message {
   background-color: #98C1D9;
 }
 
+<<<<<<< HEAD
 .forgot-link {
   color:#EE6C4D;
 }
@@ -106,3 +99,37 @@ input#email.form-control.message {
   margin-left: 5px;
   text-transform: uppercase;
 }
+=======
+.smaller-welcome {
+  height: 9rem;
+}
+
+div.user-image {
+  margin: 0.75rem 0rem 0rem 5rem;
+}
+
+.caption {
+  font-size: 10.5px;
+  text-align: center;
+  margin-left: -90%;
+}
+
+#name {
+  margin-top: 1rem;
+}
+
+#chat-label, #no-messages {
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: -5rem;
+  margin-bottom: 4rem;
+}
+
+#no-messages {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -3rem;
+}
+>>>>>>> 75f881b56680f30680828765a03a122aafe468f6

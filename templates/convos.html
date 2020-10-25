@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% set active_page = "convos" %}
+{% set active_user = user %}
 
 {% block heading %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/login-styles.css') }}">
@@ -8,8 +9,13 @@
 {% block body %}
 <div class="row">
   <div class="pricing-item active mentor-chat">
-    <h4 id="login-label">Chat with your mentor 1-1</h4>
-    <p id="no-messages">Logged in as: <span id="user">{{ user }}</span></p>
+    <div class="user-image">
+        <img style="width:80px; height:80px; border-radius: 100px;" src="{{ url_for('static', filename='/images/headshot-jacquelyn.jpg') }}" alt="">
+        <p class="caption" id="name"><b>Jacquelyn Chow</b></p>
+        <p class="caption">Director of AStartUpToo</p>
+    </div>
+    <h4 id="chat-label">Chat with your mentor 1-1</h4>
+    <p id="no-messages">Hey <span id="user">{{ user }}</span>, what would you like to learn about growing your business?</p>
 
     <div class="card-group">
       <div class="card">

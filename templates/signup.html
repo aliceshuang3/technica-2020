@@ -1,9 +1,30 @@
 {% extends "layout.html" %}
 
 {% block heading %}
-
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/signup.css')}}">
 {% endblock %}
 
 {% block body %}
+    <div class="signup-form">
+        <form action="/signup" method="post">
+            <input name="username" type="text" placeholder="username"> <br>
+            <input name="password" type="text" placeholder="password"> <br>
+            <input name="confirmation" type="text" placeholder="confirmation">
+            <input type="submit">
+        </form>
+    </div>
 
 {% endblock %}
+
+# if request.method == 'POST':
+    #     users = db.Users
+    #     existing_user = users.find_one({'name' : request.form['username']})
+    #
+    #     if existing_user is None:
+    #         hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
+    #         users.insert({'name' : request.form['username'], 'pw' : hashpass})
+    #         session['username'] = request.form['username']
+    #         return redirect(url_for('index'))
+    #
+    #     return 'That username already exists!'
+    # return render_template("login.html")
