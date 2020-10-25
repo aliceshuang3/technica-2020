@@ -69,7 +69,7 @@ https://templatemo.com/tm-535-softy-pinko
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Welcome Area Start ***** -->
-    <div class="welcome-area" id="welcome">
+    <div class="welcome-area {{ 'smaller-welcome' if active_page == 'convos' else '' }}" id="welcome">
 
         <!-- ***** Header Text Start ***** -->
         {% if active_page == 'login' %}

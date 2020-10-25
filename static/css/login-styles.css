@@ -88,3 +88,7 @@ input#email.form-control.message {
 .bubble_them {
   background-color: #98C1D9;
 }
+
+.smaller-welcome {
+  height: 9rem;
+}
