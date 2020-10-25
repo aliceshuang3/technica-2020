@@ -4,9 +4,124 @@
 {% set active_page = "funding" %}
 
 {% block heading %}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/funding.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/funding.css') }}">
 {% endblock %}
 
 {% block body %}
+<div class="fund-req" id="fund-req-container">
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header">
+                        <h2 class="inspo-title">Established Businesses</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="d-flex" style="display: flex; flex-wrap: wrap">
+                    <div class="card p-2 mt-4" style="width: 33.3%;">
+                        <div class="card-body LRwrapper">
+                            <div class="business-image" style="width: 33.3%;">
+                                <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/fakecompany2.jpg') }}" alt="">
+                            </div>
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>GetWellFast</strong></h5>
+                                <p class="business-text mb-1"><strong>establishing a culture of wellbeing support</strong></p>
+                                <p class="business-text">A corporate wellness program provider that helps people achieve their potential through remote and on-site wellbeing support.</p>
+                            </div>
+                            <div class="share-apply-btns" style="display: flex;">
+                                <a href="#" class="main-button mr-2">Share</a>
+                                <a href="#" class="main-button">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-2 mt-4" style="width: 33.3%;">
+                        <div class="card-body LRwrapper">
+                            <div class="business-image">
+                                <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/fakecompany3.svg') }}" alt="">
+                            </div>
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>Business Name</strong></h5>
+                                <p class="business-text mb-1"><strong>providing reliable bike repair all year round</strong></p>
+                                <p class="business-text">Hum any song and our technology will pin point the song and artist for you!</p>
+                            </div>
+                            <div class="share-apply-btns" style="display: flex;">
+                                <a href="#" class="main-button mr-2">Share</a>
+                                <a href="#" class="main-button">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-2 mt-4" style="width: 33.3%;">
+                        <div class="card-body LRwrapper">
+                            <div class="business-image">
+                                <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/flooop.png') }}" alt="">
+                            </div>
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>Business Name</strong></h5>
+                                <p class="business-text mb-1"><strong>bringing fresh and local food to ?</strong></p>
+                                <p class="business-text">We build exceptional digital products—from mobile apps to responsive websites, voice skills, and more—that drive growth for the world’s leading brands.</p>
+                            </div>
+                            <div class="share-apply-btns" style="display: flex;">
+                                <a href="#" class="main-button mr-2">Share</a>
+                                <a href="#" class="main-button">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-2 mt-4" style="width: 33.3%;">
+                        <div class="card-body LRwrapper">
+                            <div class="business-image">
+                                <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/flooop.png') }}" alt="">
+                            </div>
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>Business Name</strong></h5>
+                                <p class="business-text mb-1"><strong>bringing fresh and local food to ?</strong></p>
+                                <p class="business-text">We build exceptional digital products—from mobile apps to responsive websites, voice skills, and more—that drive growth for the world’s leading brands.</p>
+                            </div>
+                            <div class="share-apply-btns" style="display: flex;">
+                                <a href="#" class="main-button mr-2">Share</a>
+                                <a href="#" class="main-button">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-2 mt-4" style="width: 33.3%;">
+                        <div class="card-body LRwrapper">
+                            <div class="business-image">
+                                <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/flooop.png') }}" alt="">
+                            </div>
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>Business Name</strong></h5>
+                                <p class="business-text mb-1"><strong>bringing fresh and local food to ?</strong></p>
+                                <p class="business-text">We build exceptional digital products—from mobile apps to responsive websites, voice skills, and more—that drive growth for the world’s leading brands.</p>
+                            </div>
+                            <div class="share-apply-btns" style="display: flex;">
+                                <a href="#" class="main-button mr-2">Share</a>
+                                <a href="#" class="main-button">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-2 mt-4" style="width: 33.3%;">
+                        <div class="card-body LRwrapper">
+                            <div class="business-image">
+                                <img style="width:150px; height:150px; border: 1px solid lightgrey" src="{{ url_for('static', filename='/images/flooop.png') }}" alt="">
+                            </div>
+                            <div class="business-info">
+                                <h5 class="business-title mb-3"><strong>Business Name</strong></h5>
+                                <p class="business-text mb-1"><strong>bringing fresh and local food to ?</strong></p>
+                                <p class="business-text">We build exceptional digital products—from mobile apps to responsive websites, voice skills, and more—that drive growth for the world’s leading brands.</p>
+                            </div>
+                            <div class="share-apply-btns" style="display: flex;">
+                                <a href="#" class="main-button mr-2">Share</a>
+                                <a href="#" class="main-button">Donate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
 {% endblock %}
