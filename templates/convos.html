@@ -63,11 +63,11 @@
     if( typeof msg.user_name !== 'undefined' ) {
       // $( 'p' ).remove()
       if (msg.user_name == $( '#user' ).text()) {
-        $( 'div.message_holder_mine' ).append( '<div><b style="color: blue">'+msg.user_name+'</b> '+msg.message+'</div>' )
-        $( 'div.message_holder_them' ).append( '<div><b style="color: white">'+msg.user_name+msg.message+'</b> '+'</div>' )
+        $( 'div.message_holder_mine' ).append( '<div class="bubble_mine"><b style="color: black">'+msg.user_name+'</b> '+msg.message+'</div>' )
+        $( 'div.message_holder_them' ).append( '<div class="invisible_bubble"><b style="color: white">'+msg.user_name+msg.message+'</b> '+'</div>' )
       } else {
-        $( 'div.message_holder_them' ).append( '<div><b style="color: green">'+msg.user_name+'</b> '+msg.message+'</div>' )
-        $( 'div.message_holder_mine' ).append( '<div><b style="color: white">'+msg.user_name+msg.message+'</b> '+'</div>' )
+        $( 'div.message_holder_them' ).append( '<div class="bubble_them"><b style="color: black">'+msg.user_name+'</b> '+msg.message+'</div>' )
+        $( 'div.message_holder_mine' ).append( '<div class="invisible_bubble"><b style="color: white">'+msg.user_name+msg.message+'</b> '+'</div>' )
       }
     }
   })
