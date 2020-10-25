@@ -42,6 +42,9 @@ https://templatemo.com/tm-535-softy-pinko
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                  {% if active_user %}
+                  <p class="logged-in">Welcome, {{ active_user }}</p>
+                  {% endif %}
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="#" class="logo">
@@ -55,7 +58,9 @@ https://templatemo.com/tm-535-softy-pinko
                             <li><a href="{{ url_for('inspiration') }}" class="{{ 'active' if active_page == 'inspiration' else '' }}">Inspirations</a></li>
                             <li><a href="{{ url_for('convos') }}" class="{{ 'active' if active_page == 'convos' else '' }}">Conversations</a></li>
                             <li><a href="{{ url_for('funding') }}" class="{{ 'active' if active_page == 'funding' else '' }}">Feedback & Funding</a></li>
-                            <!-- <li><a href="{{ url_for('index') }}">Logout</a></li> -->
+                            {% if active_user %}
+                            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                            {% endif %}
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>

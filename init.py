@@ -29,7 +29,7 @@ pw = [0,1,2,3,4]
 def index():
     # if 'username' in session:
     #     return 'You are logged in as ' + session['username']
-    return render_template("index.html")
+    return render_template("index.html", user=session["username"])
 
 @app.route("/login", methods=['POST', 'GET'])
 def login():
@@ -55,11 +55,11 @@ def login():
                 return redirect(url_for('index'))
 
         return 'Invalid username/password combination'
-    return render_template("login.html")
+    return render_template("login.html", user=session["username"])
 
 @app.route("/convos", methods=["GET"])
 def convos():
-    if 'username' in session:
+    if session['username']:
         user = session['username']
         return render_template("convos.html", user=user)
     return redirect(url_for('login'))
@@ -78,11 +78,16 @@ def signup():
 
 @app.route("/inspiration", methods=["GET"])
 def inspiration():
-    return render_template("inspo.html")
+    return render_template("inspo.html", user=session["username"])
 
 @app.route("/funding", methods=["GET"])
 def funding():
-    return render_template("funding.html")
+    return render_template("funding.html", user=session["username"])
+
+@app.route("/logout", methods=["GET"])
+def logout():
+    session['username'] = ""
+    return redirect(url_for('index'))
 
 if __name__ == "__main__":
     app.run()
