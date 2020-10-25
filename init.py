@@ -33,18 +33,7 @@ def index():
 
 @app.route("/login", methods=['POST', 'GET'])
 def login():
-    # if request.method == 'POST':
-    #     users = db.Users
-    #     existing_user = users.find_one({'name' : request.form['username']})
-    #
-    #     if existing_user is None:
-    #         hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
-    #         users.insert({'name' : request.form['username'], 'pw' : hashpass})
-    #         session['username'] = request.form['username']
-    #         return redirect(url_for('index'))
-    #
-    #     return 'That username already exists!'
-    # return render_template("login.html")
+    
     if request.method == 'POST':
         users = db.Users
         login_user = users.find_one({'name' : request.form['username']})
@@ -74,7 +63,35 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
-    return render_template("signup.html")
+    if request.method == 'POST':
+
+        if not request.form.get("username"):
+            return "Please provide a username!"
+        elif not request.form.get("password"):
+            return "Please provide a password!"
+        elif not request.form.get("confirmation"):
+            return "Please confirm your password!"
+        
+        username = request.form.get("username")
+        password = request.form.get("password")
+        
+        users = db.Users
+        existing_user = users.find_one({'name' : request.form['username']})
+
+        if existing_user is None:
+
+            if password != request.form.get("confirmation"):
+                return 'Password doesn\'t match confirmation!'
+
+            hashpass = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+            users.insert({'name' : request.form['username'], 'pw' : hashpass})
+            session['username'] = username
+            return redirect(url_for('index'))
+    
+        return 'That username already exists!'
+
+    else:
+        return render_template("signup.html")
 
 @app.route("/inspiration", methods=["GET"])
 def inspiration():
