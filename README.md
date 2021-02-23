@@ -41,3 +41,23 @@ Through ThriveHer, users can gain funding for their entrepreneurial ideas and le
 - Discussions page on general business qs, resources listing/shared links
 - Allow mentees to choose more than 1 mentor if the community grows
 - More incentives for people to mentor
+
+## Website Screenshots 
+###### Home Page
+<img src="./images/home.png" alt="Home Page" width="700"/>
+
+###### Tailor your account to your goals for growth
+<img src="./images/login.png" alt="Home Page" width="700"/>
+
+###### Get inspiration from experienced businesses
+<img src="./images/inspo.png" alt="Home Page" width="700"/>
+
+###### Chat 1-1 with your mentor
+<img src="./images/convo.png" alt="Home Page" width="700"/>
+
+###### Crowdfunding so womxn can support one another
+<img src="./images/crowdfunding.png" alt="Home Page" width="700"/>
+
+###### Feedback to improve your entrepreneurial pitch
+<img src="./images/forum.png" alt="Home Page" width="700"/>
+
